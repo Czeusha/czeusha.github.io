@@ -97,32 +97,51 @@
       <h2 data-i18n="links_h">Linki</h2>
       <p class="sub" data-i18n="links_sub">Tu mnie znajdziesz.</p>
 
+      <!-- Widget Discorda: liczby pobierane na zywo z linku zaproszenia (patrz skrypt na dole strony) -->
+      <div class="discord-card">
+        <img id="dc-icon" class="dc-icon fallback" src="https://cdn.simpleicons.org/discord/5865F2" alt="" width="64" height="64">
+        <div class="dc-info">
+          <div class="dc-name" id="dc-name">Gangsterzy Czeushy</div>
+          <div class="dc-stats" id="dc-stats" hidden>
+            <span class="dc-dot"></span>
+            <span id="dc-online">0</span> <span data-i18n="dc_online">online</span>
+            <span>·</span>
+            <span id="dc-members">0</span> <span data-i18n="dc_members">członków</span>
+          </div>
+        </div>
+        <a class="btn primary" href="https://discord.gg/3G6SpS7euk" target="_blank" rel="noopener" data-i18n="dc_join">Dołącz na Discorda</a>
+      </div>
+
       <div class="links-grid">
-        <a class="link-card" href="https://discord.gg/3G6SpS7euk" target="_blank" rel="noopener">
-          <strong>Discord</strong><span>Gangsterzy Czeushy</span>
-        </a>
         <a class="link-card" href="https://twitch.tv/czeusha" target="_blank" rel="noopener">
+          <img class="ico" src="https://cdn.simpleicons.org/twitch/9146FF" alt="" width="38" height="38" loading="lazy">
           <strong>Twitch</strong><span>twitch.tv/czeusha</span>
         </a>
         <a class="link-card" href="https://kick.com/czeusha" target="_blank" rel="noopener">
+          <img class="ico" src="https://cdn.simpleicons.org/kick/53FC18" alt="" width="38" height="38" loading="lazy">
           <strong>Kick</strong><span>kick.com/czeusha</span>
         </a>
         <a class="link-card" href="https://tiktok.com/@czeusha" target="_blank" rel="noopener">
+          <img class="ico" src="https://cdn.simpleicons.org/tiktok/ffffff" alt="" width="38" height="38" loading="lazy">
           <strong>TikTok</strong><span>@czeusha</span>
         </a>
         <a class="link-card" href="https://x.com/CzeushaYT" target="_blank" rel="noopener">
+          <img class="ico" src="https://cdn.simpleicons.org/x/ffffff" alt="" width="38" height="38" loading="lazy">
           <strong>X</strong><span>@CzeushaYT</span>
         </a>
         <a class="link-card" href="https://instagram.com/czeusha" target="_blank" rel="noopener">
+          <img class="ico" src="https://cdn.simpleicons.org/instagram/E4405F" alt="" width="38" height="38" loading="lazy">
           <strong>Instagram</strong><span>@czeusha</span>
         </a>
         <a class="link-card" href="https://tipply.pl/@czeusha" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" fill="#ec4899" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
           <strong>Tipply</strong><span data-i18n="tip_s">Wesprzyj moją twórczość</span>
         </a>
         <a class="link-card" href="mailto:Czeusha@gmail.com">
+          <svg class="ico" viewBox="0 0 24 24" fill="#60a5fa" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           <strong>E-mail</strong><span>Czeusha@gmail.com</span>
         </a>
-        <!-- TODO: dodaj karte YouTube, gdy podasz link do kanalu -->
+        <!-- TODO: dodaj karte YouTube (ikona: https://cdn.simpleicons.org/youtube/FF0000), gdy podasz link do kanalu -->
       </div>
     </div>
   </section>
@@ -132,5 +151,28 @@
   </footer>
 
   <script src="lang.js"></script>
+  <script>
+    /* Widget Discorda: pobiera nazwe, ikone i liczby z publicznego linku zaproszenia.
+       Jesli sie nie uda (np. zaproszenie wygaslo), zostaje domyslny wyglad bez liczb. */
+    (function () {
+      var code = '3G6SpS7euk';
+      fetch('https://discord.com/api/v9/invites/' + code + '?with_counts=true')
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (!d || !d.guild) return;
+          var g = d.guild;
+          if (g.icon) {
+            var img = document.getElementById('dc-icon');
+            img.src = 'https://cdn.discordapp.com/icons/' + g.id + '/' + g.icon + '.png?size=128';
+            img.classList.remove('fallback');
+          }
+          document.getElementById('dc-name').textContent = g.name;
+          document.getElementById('dc-online').textContent = Number(d.approximate_presence_count).toLocaleString();
+          document.getElementById('dc-members').textContent = Number(d.approximate_member_count).toLocaleString();
+          document.getElementById('dc-stats').hidden = false;
+        })
+        .catch(function () {});
+    })();
+  </script>
 </body>
 </html>

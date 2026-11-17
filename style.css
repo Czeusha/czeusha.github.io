@@ -209,25 +209,48 @@ footer {
 }
 .gallery .ph { display: grid; place-items: center; color: var(--muted); font-size: .9rem; }
 
-/* RISEN THEME – wlasny wyglad podstrony Risen Together */
-.theme-risen {
-  --bg: #0a0f0d;
-  --bg-2: #101814;
-  --card: #141d18;
-  --border: #243229;
-  --accent: #d4a24c;
-  --accent-2: #34d399;
+/* KAFELKI LINKOW Z IKONAMI (wycentrowane) */
+.link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 24px 16px;
 }
-.theme-risen .hero {
-  background:
-    linear-gradient(rgba(10, 15, 13, .75), rgba(10, 15, 13, .96)),
-    url('risen-banner.jpg') center / cover no-repeat,
-    radial-gradient(700px 320px at 50% 0%, rgba(212, 162, 76, .22), transparent 70%),
-    var(--bg);
-  padding: 110px 0 90px;
+.link-card .ico { width: 38px; height: 38px; margin-bottom: 4px; }
+
+/* WIDGET DISCORDA */
+.discord-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(88, 101, 242, .2), var(--card));
+  border: 1px solid rgba(88, 101, 242, .55);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  margin-bottom: 22px;
 }
-.theme-risen .hero h1 { letter-spacing: .1em; }
-.theme-risen .steps li::before { background: var(--accent); }
+.dc-icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: #1f2330;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.dc-icon.fallback { padding: 15px; }
+.dc-info { flex: 1; min-width: 190px; }
+.dc-name { font-weight: 600; font-size: 1.25rem; line-height: 1.3; }
+.dc-stats {
+  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  color: var(--muted); font-size: .92rem;
+}
+.dc-stats[hidden] { display: none; }
+.dc-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: #23a55a; display: inline-block;
+}
 
 /* PRZELACZNIK JEZYKA */
 .nav-links { align-items: center; }
@@ -249,5 +272,4 @@ footer {
   .nav-links a { font-size: .85rem; }
   .logo { font-size: 1.3rem; }
   .hero { padding: 60px 0 50px; }
-  .theme-risen .hero { padding: 70px 0 60px; }
 }

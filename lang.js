@@ -37,6 +37,9 @@ var TRANSLATIONS = {
     links_h: "Links",
     links_sub: "Where to find me.",
     tip_s: "Support my work",
+    dc_online: "online",
+    dc_members: "members",
+    dc_join: "Join on Discord",
 
     r_hero_p: "A co-op mod for Risen. Explore the island with a friend instead of wandering alone.",
     r_dl: "Download – coming soon",
