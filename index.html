@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Czeusha – Mods & Projects</title>
-  <meta name="description" content="Czeusha's website: mods, co-op projects and ready-made packs of older games that are easy to run on modern computers.">
+  <title data-i18n="title">Czeusha – Mody i projekty</title>
+  <meta name="description" content="Strona Czeushy: YouTuber, gamer i streamer. Moje mody, projekty co-op oraz gotowe paczki starszych gier.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,61 +13,116 @@
     <div class="container">
       <a class="logo" href="index.html">CZEU<span>SHA</span></a>
       <div class="nav-links">
-        <a class="active" href="index.html">Home</a>
+        <a class="active" href="index.html" data-i18n="nav_home">Start</a>
         <a href="risen-together.html">Risen Together</a>
-        <a href="#about">About</a>
+        <a href="#linki" data-i18n="nav_links">Linki</a>
+        <div class="lang">
+          <button type="button" data-lang="pl">PL</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
       </div>
     </div>
   </nav>
 
   <header class="hero">
     <div class="container">
-      <h1>Mods. Co-op.<br><em>Old games, new life.</em></h1>
-      <p>Small YouTuber, gamer and streamer. I make mods, build co-op projects and prepare ready-made packs of older games that run easily on modern computers.</p>
+      <h1 data-i18n="h1">Mody. Co-op.<br><em>Stare gry, nowe życie.</em></h1>
+      <p data-i18n="hero_p">Mały YouTuber, gamer i streamer. Robię mody, tworzę projekty co-op i przygotowuję gotowe paczki starszych gier, które łatwo odpalić na nowych komputerach.</p>
       <div class="btn-row">
-        <a class="btn primary" href="#projects">See my projects</a>
-        <!-- TODO: wstaw swoj link do YouTube -->
-        <a class="btn" href="#" target="_blank" rel="noopener">YouTube</a>
-        <!-- TODO: wstaw swoj link do Twitcha -->
-        <a class="btn" href="#" target="_blank" rel="noopener">Twitch</a>
+        <a class="btn primary" href="#projekty" data-i18n="btn_projects">Moje projekty</a>
+        <a class="btn" href="https://twitch.tv/czeusha" target="_blank" rel="noopener">Twitch</a>
+        <a class="btn" href="https://discord.gg/3G6SpS7euk" target="_blank" rel="noopener">Discord</a>
       </div>
     </div>
   </header>
 
-  <section id="projects">
+  <section id="projekty">
     <div class="container">
-      <h2>Projects</h2>
-      <p class="sub">Everything I'm working on, in one place.</p>
+      <h2 data-i18n="projects_h">Projekty</h2>
+      <p class="sub" data-i18n="projects_sub">Wszystko, nad czym pracuję i co już zrobiłem, w jednym miejscu.</p>
 
       <div class="grid">
         <a class="card" href="risen-together.html">
-          <span class="badge">In development</span>
+          <span class="badge" data-i18n="badge_dev">W produkcji</span>
           <h3>Risen Together</h3>
-          <p>A co-op mod for Risen. Play the adventure with a friend.</p>
+          <p data-i18n="risen_p">Mod co-op do gry Risen. Przejdź przygodę razem ze znajomym.</p>
         </a>
 
+        <!-- TODO: dodaj link do pobrania, zamieniajac <div> na <a class="card" href="LINK"> -->
         <div class="card">
-          <span class="badge planned">Planned</span>
-          <h3>Retro Packs</h3>
-          <p>Ready-made packs of older games, set up so they launch easily on new computers.</p>
+          <span class="badge done" data-i18n="badge_done">Wydane</span>
+          <h3>Czeusha's Morrowind Coop</h3>
+          <p data-i18n="coop_p">Zestaw 150 modyfikacji do Morrowinda, przygotowany do gry w co-opie.</p>
         </div>
 
         <div class="card">
-          <span class="badge planned">Coming later</span>
-          <h3>More mods</h3>
-          <p>New projects will show up here as soon as they're ready.</p>
+          <span class="badge done" data-i18n="badge_done">Wydane</span>
+          <h3 data-i18n="dub_h">Polski dubbing do Morrowinda</h3>
+          <p data-i18n="dub_p">Instalator polskiego dubbingu do Morrowinda, stworzony razem z Polskimi Khajitami.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge done" data-i18n="badge_done">Wydane</span>
+          <h3 data-i18n="hom_h">Spolszczenie do HoM 5</h3>
+          <p data-i18n="hom_p">Spolszczenie do Heroes of Might and Magic 5 wraz z dwoma dodatkami, dostępne na Steamie.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge done" data-i18n="badge_done">Wydane</span>
+          <h3 data-i18n="guides_h">Poradniki na Steamie</h3>
+          <p data-i18n="guides_p">Wiele poradników do gier opublikowanych na Steamie.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge planned" data-i18n="badge_planned">W planach</span>
+          <h3>Retro Packs</h3>
+          <p data-i18n="retro_p">Gotowe paczki starszych gier, przygotowane tak, żeby łatwo je uruchomić na nowych komputerach.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="band">
+  <section id="o-mnie" class="band">
     <div class="container">
-      <h2>About</h2>
-      <!-- TODO: dopisz kilka zdań o sobie i kanale -->
-      <p class="sub">I make videos and streams about games, and I edit and create mods for them. This site is where all my mods and downloads live.</p>
-      <div class="note">
-        Mods and patches only – you always need your own copy of the original game.
+      <h2 data-i18n="about_h">O mnie</h2>
+      <p class="sub" data-i18n="about_sub">Grajek lubiący stare produkcje, mimo mocnego sprzętu. Gram głównie w gry z trybem kooperacji, czy to za pomocą modów, czy natywnie. Na tej stronie znajdziesz wszystkie moje mody i pliki do pobrania.</p>
+      <div class="note" data-i18n="about_note">
+        Udostępniam same mody, łatki i instalatory. Do ich użycia potrzebujesz własnej kopii oryginalnej gry.
+      </div>
+    </div>
+  </section>
+
+  <section id="linki">
+    <div class="container">
+      <h2 data-i18n="links_h">Linki</h2>
+      <p class="sub" data-i18n="links_sub">Tu mnie znajdziesz.</p>
+
+      <div class="links-grid">
+        <a class="link-card" href="https://discord.gg/3G6SpS7euk" target="_blank" rel="noopener">
+          <strong>Discord</strong><span>Gangsterzy Czeushy</span>
+        </a>
+        <a class="link-card" href="https://twitch.tv/czeusha" target="_blank" rel="noopener">
+          <strong>Twitch</strong><span>twitch.tv/czeusha</span>
+        </a>
+        <a class="link-card" href="https://kick.com/czeusha" target="_blank" rel="noopener">
+          <strong>Kick</strong><span>kick.com/czeusha</span>
+        </a>
+        <a class="link-card" href="https://tiktok.com/@czeusha" target="_blank" rel="noopener">
+          <strong>TikTok</strong><span>@czeusha</span>
+        </a>
+        <a class="link-card" href="https://x.com/CzeushaYT" target="_blank" rel="noopener">
+          <strong>X</strong><span>@CzeushaYT</span>
+        </a>
+        <a class="link-card" href="https://instagram.com/czeusha" target="_blank" rel="noopener">
+          <strong>Instagram</strong><span>@czeusha</span>
+        </a>
+        <a class="link-card" href="https://tipply.pl/@czeusha" target="_blank" rel="noopener">
+          <strong>Tipply</strong><span data-i18n="tip_s">Wesprzyj moją twórczość</span>
+        </a>
+        <a class="link-card" href="mailto:Czeusha@gmail.com">
+          <strong>E-mail</strong><span>Czeusha@gmail.com</span>
+        </a>
+        <!-- TODO: dodaj karte YouTube, gdy podasz link do kanalu -->
       </div>
     </div>
   </section>
@@ -76,5 +131,6 @@
     <div class="container">© 2026 Czeusha</div>
   </footer>
 
+  <script src="lang.js"></script>
 </body>
 </html>

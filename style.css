@@ -163,7 +163,91 @@ footer {
   font-size: .9rem;
 }
 
+/* EXTRA */
+.badge.done { border-color: #34d399; color: #34d399; }
+
+.links-grid {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+.link-card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  color: var(--text);
+  transition: transform .2s, border-color .2s;
+}
+.link-card:hover { transform: translateY(-3px); border-color: var(--accent); text-decoration: none; }
+.link-card strong { display: block; font-size: 1.05rem; }
+.link-card span { color: var(--muted); font-size: .88rem; word-break: break-all; }
+
+.video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card);
+  display: grid; place-items: center;
+  color: var(--muted);
+}
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+.gallery {
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.gallery img, .gallery .ph {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+.gallery .ph { display: grid; place-items: center; color: var(--muted); font-size: .9rem; }
+
+/* RISEN THEME – wlasny wyglad podstrony Risen Together */
+.theme-risen {
+  --bg: #0a0f0d;
+  --bg-2: #101814;
+  --card: #141d18;
+  --border: #243229;
+  --accent: #d4a24c;
+  --accent-2: #34d399;
+}
+.theme-risen .hero {
+  background:
+    linear-gradient(rgba(10, 15, 13, .75), rgba(10, 15, 13, .96)),
+    url('risen-banner.jpg') center / cover no-repeat,
+    radial-gradient(700px 320px at 50% 0%, rgba(212, 162, 76, .22), transparent 70%),
+    var(--bg);
+  padding: 110px 0 90px;
+}
+.theme-risen .hero h1 { letter-spacing: .1em; }
+.theme-risen .steps li::before { background: var(--accent); }
+
+/* PRZELACZNIK JEZYKA */
+.nav-links { align-items: center; }
+.lang { display: flex; gap: 4px; margin-left: 6px; }
+.lang button {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 4px 9px;
+  border-radius: 8px;
+  cursor: pointer;
+  font: 600 .8rem 'Inter', sans-serif;
+}
+.lang button:hover { color: var(--text); border-color: var(--accent); }
+.lang button.active { background: var(--accent); border-color: var(--accent); color: #111; }
+
 @media (max-width: 560px) {
-  .nav-links { gap: 14px; }
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: .85rem; }
+  .logo { font-size: 1.3rem; }
   .hero { padding: 60px 0 50px; }
+  .theme-risen .hero { padding: 70px 0 60px; }
 }

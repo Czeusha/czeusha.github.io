@@ -1,92 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Risen Together – Co-op mod for Risen | Czeusha</title>
-  <meta name="description" content="Risen Together: a co-op mod for Risen by Czeusha.">
+  <title data-i18n="r_title">Risen Together – mod co-op do Risen | Czeusha</title>
+  <meta name="description" content="Risen Together: mod co-op do gry Risen autorstwa Czeushy.">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="theme-risen">
 
   <nav class="nav">
     <div class="container">
       <a class="logo" href="index.html">CZEU<span>SHA</span></a>
       <div class="nav-links">
-        <a href="index.html">Home</a>
+        <a href="index.html" data-i18n="nav_home">Start</a>
         <a class="active" href="risen-together.html">Risen Together</a>
-        <a href="index.html#about">About</a>
+        <a href="index.html#linki" data-i18n="nav_links">Linki</a>
+        <div class="lang">
+          <button type="button" data-lang="pl">PL</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
       </div>
     </div>
   </nav>
 
+  <!-- Tlo hero: wrzuc swoj screenshot z gry jako "risen-banner.jpg" do repozytorium, a pojawi sie automatycznie -->
   <header class="hero">
     <div class="container">
-      <span class="badge">In development</span>
+      <span class="badge" data-i18n="badge_dev">W produkcji</span>
       <h1>Risen <em>Together</em></h1>
-      <p>A co-op mod for Risen. Explore the island with a friend instead of going alone.</p>
+      <p data-i18n="r_hero_p">Mod co-op do gry Risen. Eksploruj wyspę razem ze znajomym zamiast wędrować samotnie.</p>
       <div class="btn-row">
         <!-- TODO: gdy bedzie wersja do pobrania, podmien href na link do Releases i usun klase "disabled" -->
-        <a class="btn primary disabled" href="#">Download – coming soon</a>
-        <a class="btn" href="#install">How to install</a>
+        <a class="btn primary disabled" href="#" data-i18n="r_dl">Pobierz – wkrótce</a>
+        <a class="btn" href="#instalacja" data-i18n="r_how">Jak zainstalować</a>
+        <a class="btn" href="https://discord.gg/3G6SpS7euk" target="_blank" rel="noopener">Discord</a>
       </div>
     </div>
   </header>
 
   <section>
     <div class="container">
-      <h2>About the mod</h2>
-      <!-- TODO: opisz mod wlasnymi slowami -->
-      <p class="sub">Risen Together is a work in progress. This page will be updated with details, screenshots and downloads as the mod develops.</p>
+      <h2 data-i18n="r_video_h">Zwiastun / pokaz</h2>
+      <p class="sub" data-i18n="r_video_sub">Najlepiej widać, jak działa mod, na filmie.</p>
+      <div class="video">
+        <span data-i18n="r_video_ph">Wideo pojawi się tutaj</span>
+        <!-- TODO: gdy wrzucisz film na YouTube, usun linijke <span> powyzej i odkomentuj linijke ponizej,
+             zamieniajac WIDEO_ID na ID filmu (to ciag znakow po "v=" w linku)
+        <iframe src="https://www.youtube.com/embed/WIDEO_ID" title="Risen Together" allowfullscreen loading="lazy"></iframe>
+        -->
+      </div>
+    </div>
+  </section>
 
-      <h3 style="margin: 28px 0 14px;">Features</h3>
+  <section class="band">
+    <div class="container">
+      <h2 data-i18n="r_about_h">O modzie</h2>
+      <!-- TODO: opisz mod wlasnymi slowami (i zaktualizuj tlumaczenie w lang.js) -->
+      <p class="sub" data-i18n="r_about_sub">Risen Together jest w trakcie tworzenia. Ta strona będzie uzupełniana o szczegóły, zrzuty ekranu i pliki do pobrania wraz z postępami prac.</p>
+
+      <h3 style="margin: 28px 0 14px;" data-i18n="r_feat_h">Funkcje</h3>
       <ul class="list">
-        <!-- TODO: zamien na prawdziwe funkcje moda -->
-        <li>Co-op play (details coming soon)</li>
-        <li>Feature 2</li>
-        <li>Feature 3</li>
+        <!-- TODO: zamien na prawdziwe funkcje moda (i zaktualizuj tlumaczenie w lang.js) -->
+        <li data-i18n="r_f1">Gra w co-opie (szczegóły wkrótce)</li>
+        <li data-i18n="r_f2">Funkcja 2</li>
+        <li data-i18n="r_f3">Funkcja 3</li>
       </ul>
     </div>
   </section>
 
-  <section class="band" id="install">
+  <section>
     <div class="container">
-      <h2>How to install</h2>
-      <p class="sub">Installation steps will be added when the first test version is released.</p>
+      <h2 data-i18n="r_gal_h">Galeria</h2>
+      <p class="sub" data-i18n="r_gal_sub">Zrzuty ekranu i krótkie klipy z moda.</p>
+      <div class="gallery">
+        <!-- TODO: wrzuc zrzuty do repozytorium i zamien kazdy blok .ph na: <img src="screen1.jpg" alt="Opis" loading="lazy"> -->
+        <div class="ph" data-i18n="r_shot1">Zrzut ekranu 1</div>
+        <div class="ph" data-i18n="r_shot2">Zrzut ekranu 2</div>
+        <div class="ph" data-i18n="r_shot3">Zrzut ekranu 3</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="instalacja">
+    <div class="container">
+      <h2 data-i18n="r_inst_h">Jak zainstalować</h2>
+      <p class="sub" data-i18n="r_inst_sub">Instrukcja zostanie uzupełniona po wydaniu pierwszej wersji testowej.</p>
       <ol class="steps">
-        <!-- TODO: uzupelnij po wydaniu pierwszej wersji -->
-        <li>Install Risen (original game required).</li>
-        <li>Download the latest version of the mod from this page.</li>
-        <li>Follow the install instructions included in the download.</li>
+        <!-- TODO: uzupelnij po wydaniu pierwszej wersji (i zaktualizuj tlumaczenie w lang.js) -->
+        <li data-i18n="r_s1">Zainstaluj Risen (wymagana oryginalna kopia gry).</li>
+        <li data-i18n="r_s2">Pobierz najnowszą wersję moda z tej strony.</li>
+        <li data-i18n="r_s3">Postępuj zgodnie z instrukcją dołączoną do paczki.</li>
       </ol>
     </div>
   </section>
 
   <section>
     <div class="container">
-      <h2>Screenshots</h2>
-      <p class="sub">Screenshots will appear here.</p>
-      <!-- TODO: wrzuc zrzuty ekranu do repozytorium i dodaj np. <img src="screen1.jpg" alt="..."> -->
-      <div class="note">No screenshots yet.</div>
+      <h2 data-i18n="r_log_h">Lista zmian</h2>
+      <p class="sub" data-i18n="r_log_sub">Co zmieniło się w kolejnych wersjach.</p>
+      <div class="log">
+        <h3 data-i18n="r_log_t">Start projektu</h3>
+        <div class="date">2026</div>
+        <p style="color: var(--muted);" data-i18n="r_log_p">Rozpoczęto prace nad Risen Together.</p>
+      </div>
     </div>
   </section>
 
   <section class="band">
     <div class="container">
-      <h2>Changelog</h2>
-      <p class="sub">What changed in each version.</p>
-      <div class="log">
-        <h3>Project started</h3>
-        <div class="date">2026</div>
-        <p style="color: var(--muted);">Work on Risen Together has begun.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="note">
-        This is an early, experimental project. Expect bugs and changes. The mod requires your own copy of Risen and is not affiliated with the game's creators or publisher.
+      <div class="note" data-i18n="r_warn">
+        To wczesny, eksperymentalny projekt. Spodziewaj się błędów i zmian. Mod wymaga własnej kopii gry Risen i nie jest powiązany z twórcami ani wydawcą gry.
       </div>
     </div>
   </section>
@@ -95,5 +119,6 @@
     <div class="container">© 2026 Czeusha</div>
   </footer>
 
+  <script src="lang.js"></script>
 </body>
 </html>
