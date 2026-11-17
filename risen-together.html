@@ -13,8 +13,8 @@
   <meta property="og:image" content="https://czeusha.github.io/risen-banner.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="risen.css">
+  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="risen.css?v=3">
 </head>
 <body class="theme-risen">
 
@@ -23,7 +23,48 @@
       <a class="logo" href="index.html">CZEU<span>SHA</span></a>
       <div class="nav-links">
         <a href="index.html" data-i18n="nav_home">Start</a>
-        <a class="active" href="risen-together.html">Risen Together</a>
+
+        <!-- Menu rozwijane: lista pojawia sie pod przyciskiem po najechaniu myszka (na telefonie po dotknieciu) -->
+        <div class="dropdown">
+          <button type="button" class="dd-btn active" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav_coop">Projekty Coop</span> <span class="caret" aria-hidden="true">&#9662;</span></button>
+          <div class="dd-menu"><div class="dd-panel">
+            <a class="dd-item" href="risen-together.html">
+              <img src="risen-banner.jpg" alt="" width="64" height="40" loading="lazy">
+              <span><strong>Risen Together</strong><small data-i18n="badge_dev">W produkcji</small></span>
+            </a>
+            <!-- Kolejny projekt coop dodasz, kopiujac blok <a class="dd-item"> powyzej -->
+          </div></div>
+        </div>
+
+        <div class="dropdown">
+          <button type="button" class="dd-btn" aria-haspopup="true" aria-expanded="false"><span>Retro Packs</span> <span class="caret" aria-hidden="true">&#9662;</span></button>
+          <div class="dd-menu"><div class="dd-panel">
+            <div class="dd-item static">
+              <span><strong data-i18n="retro_soon_h">Pierwsze paczki wkrótce</strong><small data-i18n="badge_planned">W planach</small></span>
+            </div>
+            <!-- Gdy bedzie pierwsza paczka: dodaj tu <a class="dd-item" href="strona-paczki.html"> w takim samym ukladzie jak Risen Together -->
+          </div></div>
+        </div>
+
+        <div class="dropdown">
+          <button type="button" class="dd-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav_other">Pozostałe projekty</span> <span class="caret" aria-hidden="true">&#9662;</span></button>
+          <div class="dd-menu"><div class="dd-panel">
+            <!-- TODO: gdy beda linki (Steam, pobieranie), zamien <div class="dd-item static"> na <a class="dd-item" href="LINK"> (i zamykajacy </div> na </a>) -->
+            <div class="dd-item static">
+              <span><strong>Czeusha's Morrowind Coop</strong><small data-i18n="badge_done">Wydane</small></span>
+            </div>
+            <div class="dd-item static">
+              <span><strong data-i18n="dub_h">Polski dubbing do Morrowinda</strong><small data-i18n="badge_done">Wydane</small></span>
+            </div>
+            <div class="dd-item static">
+              <span><strong data-i18n="hom_h">Spolszczenie do HoM 5</strong><small data-i18n="badge_done">Wydane</small></span>
+            </div>
+            <div class="dd-item static">
+              <span><strong data-i18n="guides_h">Poradniki na Steamie</strong><small data-i18n="badge_done">Wydane</small></span>
+            </div>
+          </div></div>
+        </div>
+
         <a href="stream.html">Stream</a>
         <a href="index.html#linki" data-i18n="nav_links">Linki</a>
         <div class="lang">
@@ -169,6 +210,6 @@
     <div class="container">© 2026 Czeusha</div>
   </footer>
 
-  <script src="lang.js"></script>
+  <script src="lang.js?v=3"></script>
 </body>
 </html>

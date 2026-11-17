@@ -10,31 +10,24 @@ var TRANSLATIONS = {
 
     nav_home: "Home",
     nav_links: "Links",
+    nav_coop: "Co-op projects",
+    nav_other: "Other projects",
 
     h1: "Mods. Co-op.<br><em>Old games, new life.</em>",
     hero_p: "Small YouTuber, gamer and streamer. I make mods, build co-op projects and prepare ready-made packs of older games that are easy to run on modern computers.",
     btn_projects: "My projects",
 
-    projects_h: "Projects",
-    projects_sub: "Everything I'm working on and have already made, in one place.",
+    feat_h: "Main project",
+    feat_sub: "You'll also find all projects in the menu at the top of the page.",
+    btn_view: "View project",
     badge_dev: "In development",
     badge_done: "Released",
     badge_planned: "Planned",
     risen_p: "A co-op mod for Risen. Play the adventure with a friend.",
-    coop_p: "A set of 150 Morrowind mods, prepared for playing in co-op.",
     dub_h: "Polish dubbing for Morrowind",
-    dub_p: "An installer for Polish voice dubbing for Morrowind, made together with the Polish Khajiits.",
     hom_h: "Polish translation for HoM 5",
-    hom_p: "A Polish translation for Heroes of Might and Magic 5 with both expansions, available on Steam.",
     guides_h: "Steam guides",
-    guides_p: "Many game guides published on Steam.",
-    retro_p: "Ready-made packs of older games, set up to launch easily on new computers.",
-    coop_h: "Co-op projects",
-    coop_sub: "Mods that let you play with friends.",
-    retro_sub: "Ready-made packs of older games for modern computers.",
     retro_soon_h: "First packs coming soon",
-    retro_soon_p: "More titles will appear on this list as they're ready.",
-    other_h: "Other released projects",
 
     about_h: "About me",
     about_sub: "A gamer who loves old productions despite powerful hardware. I mostly play games with a co-op mode, whether through mods or natively. You'll find all my mods and downloads on this site.",
@@ -151,3 +144,35 @@ document.querySelectorAll('.lang button').forEach(function (b) {
 });
 
 setLang(detectLang());
+
+
+/* Menu rozwijane w nawigacji.
+   Na komputerze lista pokazuje sie po najechaniu myszka (robi to CSS).
+   Ten kod dodaje otwieranie klikniecem/dotknieciem (telefon) i zamykanie klawiszem Esc. */
+(function () {
+  var dds = document.querySelectorAll('.dropdown');
+
+  function closeAll(except) {
+    dds.forEach(function (d) {
+      if (d === except) return;
+      d.classList.remove('open');
+      var b = d.querySelector('.dd-btn');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  dds.forEach(function (d) {
+    var btn = d.querySelector('.dd-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var willOpen = !d.classList.contains('open');
+      closeAll(d);
+      d.classList.toggle('open', willOpen);
+      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+  });
+
+  document.addEventListener('click', function () { closeAll(null); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(null); });
+})();
