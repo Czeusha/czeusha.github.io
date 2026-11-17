@@ -16,6 +16,7 @@
       <div class="nav-links">
         <a href="index.html" data-i18n="nav_home">Start</a>
         <a class="active" href="risen-together.html">Risen Together</a>
+        <a href="stream.html">Stream</a>
         <a href="index.html#linki" data-i18n="nav_links">Linki</a>
         <div class="lang">
           <button type="button" data-lang="pl">PL</button>
@@ -42,8 +43,62 @@
 
   <section>
     <div class="container">
+      <h2 data-i18n="r_about_h">O modzie</h2>
+      <p class="sub" data-i18n="r_about_sub">Risen Together dodaje do Risena tryb kooperacji. Projekt jest w trakcie tworzenia, a ta strona będzie uzupełniana o zrzuty ekranu, filmy i pliki do pobrania.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="container">
+      <h2 data-i18n="r_feat_h">Funkcje</h2>
+      <p class="sub" data-i18n="r_dev_note">Poniższe funkcje działają w wersji deweloperskiej. Wydanie do pobrania jeszcze nie jest dostępne.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h3 data-i18n="r_done_h">Już działa</h3>
+          <ul class="list">
+            <li data-i18n="d1">Handel między graczami</li>
+            <li data-i18n="d2">Dzielenie przedmiotów i wyrzucanie ich (tego nie było w oryginale)</li>
+            <li data-i18n="d3">Synchronizacja oświetlenia: pochodnie i magiczne światło</li>
+            <li data-i18n="d4">Sprint wraz z synchronizacją</li>
+            <li data-i18n="d5">Synchronizacja walki i animacji ruchu</li>
+            <li data-i18n="d6">Synchronizacja strzelania z łuku</li>
+            <li data-i18n="d7">Nowy graficzny HUD</li>
+            <li data-i18n="d8">HUD obrażeń, atrybutów oraz zdrowia przeciwników</li>
+            <li data-i18n="d9">Lokator graczy: pokazuje, gdzie jest druga osoba, w którą stronę i jak daleko</li>
+            <li data-i18n="d10">Wybór koloru gracza</li>
+            <li data-i18n="d11">Wbudowane ustawienia co-opa, w których dostosujesz wszystko pod siebie: natywny Risen, mój ulepszony wariant albo np. tylko nowy kompas i UI</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="r_wip_h">W trakcie prac</h3>
+          <ul class="list">
+            <li data-i18n="w1">Przeniesienie Risena na nowy silnik renderowania (Vulkan wrapper): lepszy render, większy zasięg widzenia i więcej opcji grafiki</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="r_plan_h">W planach</h3>
+          <ul class="list">
+            <li data-i18n="p1">Minimapa</li>
+            <li data-i18n="p2">Synchronizacja dialogów i misji</li>
+            <li data-i18n="p3">Synchronizacja magii: przemiana, przywoływanie, telekineza, lewitacja</li>
+            <li data-i18n="p4">Możliwość gry innymi postaciami, nie tylko głównym bohaterem</li>
+            <li data-i18n="p5">Odświeżenie grafiki: shadery i tekstury</li>
+            <li data-i18n="p6">Nowa zawartość, balans i mechaniki</li>
+            <li data-i18n="p7">Launcher, który sam pobierze i zainstaluje wszystko</li>
+            <li data-i18n="p8">Integracja ze Steamem: gra ze znajomymi przez Steam</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
       <h2 data-i18n="r_video_h">Zwiastun / pokaz</h2>
-      <p class="sub" data-i18n="r_video_sub">Najlepiej widać, jak działa mod, na filmie.</p>
+      <p class="sub" data-i18n="r_video_sub">Gdy będzie wersja warta nagrania, pokażę tu film z gry.</p>
       <div class="video">
         <span data-i18n="r_video_ph">Wideo pojawi się tutaj</span>
         <!-- TODO: gdy wrzucisz film na YouTube, usun linijke <span> powyzej i odkomentuj linijke ponizej,
@@ -56,24 +111,8 @@
 
   <section class="band">
     <div class="container">
-      <h2 data-i18n="r_about_h">O modzie</h2>
-      <!-- TODO: opisz mod wlasnymi slowami (i zaktualizuj tlumaczenie w lang.js) -->
-      <p class="sub" data-i18n="r_about_sub">Risen Together jest w trakcie tworzenia. Ta strona będzie uzupełniana o szczegóły, zrzuty ekranu i pliki do pobrania wraz z postępami prac.</p>
-
-      <h3 style="margin: 28px 0 14px;" data-i18n="r_feat_h">Funkcje</h3>
-      <ul class="list">
-        <!-- TODO: zamien na prawdziwe funkcje moda (i zaktualizuj tlumaczenie w lang.js) -->
-        <li data-i18n="r_f1">Gra w co-opie (szczegóły wkrótce)</li>
-        <li data-i18n="r_f2">Funkcja 2</li>
-        <li data-i18n="r_f3">Funkcja 3</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
       <h2 data-i18n="r_gal_h">Galeria</h2>
-      <p class="sub" data-i18n="r_gal_sub">Zrzuty ekranu i krótkie klipy z moda.</p>
+      <p class="sub" data-i18n="r_gal_sub">Zrzuty ekranu pojawią się tutaj, gdy będzie co pokazać.</p>
       <div class="gallery">
         <!-- TODO: wrzuc zrzuty do repozytorium i zamien kazdy blok .ph na: <img src="screen1.jpg" alt="Opis" loading="lazy"> -->
         <div class="ph" data-i18n="r_shot1">Zrzut ekranu 1</div>
@@ -83,32 +122,31 @@
     </div>
   </section>
 
-  <section class="band" id="instalacja">
+  <section id="instalacja">
     <div class="container">
       <h2 data-i18n="r_inst_h">Jak zainstalować</h2>
-      <p class="sub" data-i18n="r_inst_sub">Instrukcja zostanie uzupełniona po wydaniu pierwszej wersji testowej.</p>
+      <p class="sub" data-i18n="r_inst_sub">Docelowo launcher pobierze i zainstaluje wszystko za Ciebie. Na razie wersja do pobrania nie jest jeszcze dostępna.</p>
       <ol class="steps">
-        <!-- TODO: uzupelnij po wydaniu pierwszej wersji (i zaktualizuj tlumaczenie w lang.js) -->
         <li data-i18n="r_s1">Zainstaluj Risen (wymagana oryginalna kopia gry).</li>
-        <li data-i18n="r_s2">Pobierz najnowszą wersję moda z tej strony.</li>
-        <li data-i18n="r_s3">Postępuj zgodnie z instrukcją dołączoną do paczki.</li>
+        <li data-i18n="r_s2">Pobierz launcher Risen Together (wkrótce).</li>
+        <li data-i18n="r_s3">Launcher zainstaluje mod i pozwoli ustawić co-op pod siebie.</li>
       </ol>
     </div>
   </section>
 
-  <section>
+  <section class="band">
     <div class="container">
       <h2 data-i18n="r_log_h">Lista zmian</h2>
       <p class="sub" data-i18n="r_log_sub">Co zmieniło się w kolejnych wersjach.</p>
       <div class="log">
         <h3 data-i18n="r_log_t">Start projektu</h3>
         <div class="date">2026</div>
-        <p style="color: var(--muted);" data-i18n="r_log_p">Rozpoczęto prace nad Risen Together.</p>
+        <p data-i18n="r_log_p">Rozpoczęto prace nad Risen Together.</p>
       </div>
     </div>
   </section>
 
-  <section class="band">
+  <section>
     <div class="container">
       <div class="note" data-i18n="r_warn">
         To wczesny, eksperymentalny projekt. Spodziewaj się błędów i zmian. Mod wymaga własnej kopii gry Risen i nie jest powiązany z twórcami ani wydawcą gry.

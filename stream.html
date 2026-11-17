@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stream – Czeusha</title>
+  <meta name="description" content="Transmisja na żywo i harmonogram streamów Czeushy.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a class="logo" href="index.html">CZEU<span>SHA</span></a>
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav_home">Start</a>
+        <a href="risen-together.html">Risen Together</a>
+        <a class="active" href="stream.html">Stream</a>
+        <a href="index.html#linki" data-i18n="nav_links">Linki</a>
+        <div class="lang">
+          <button type="button" data-lang="pl">PL</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1><em>Stream</em></h1>
+      <p data-i18n="s_hero_p">Oglądaj mnie na żywo i sprawdź, kiedy są kolejne streamy.</p>
+      <div class="btn-row">
+        <a class="btn primary" href="https://twitch.tv/czeusha" target="_blank" rel="noopener">Twitch</a>
+        <a class="btn" href="https://kick.com/czeusha" target="_blank" rel="noopener">Kick</a>
+        <!-- TODO: dodaj przycisk YouTube, gdy podasz link do kanalu -->
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 data-i18n="s_live_h">Na żywo</h2>
+      <p class="sub" data-i18n="s_live_sub">Gdy streamuję, zobaczysz tutaj transmisję. W przeciwnym razie zobaczysz ekran offline.</p>
+
+      <!-- Odtwarzacz Twitcha. Parametr "parent" musi byc adresem strony.
+           Jesli kiedys kupisz wlasna domene, dopisz ja: &parent=twojadomena.pl -->
+      <div class="video">
+        <iframe
+          src="https://player.twitch.tv/?channel=czeusha&parent=czeusha.github.io&muted=true&autoplay=false"
+          title="Twitch – czeusha"
+          allowfullscreen
+          loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="container">
+      <h2 data-i18n="s_sched_h">Harmonogram</h2>
+      <p class="sub" data-i18n="s_sched_sub">Kiedy zwykle streamuję.</p>
+
+      <!-- TODO: wpisz swoje dni, godziny i co streamujesz (zamien myslniki "—").
+           Jesli nie streamujesz danego dnia, zostaw "—" albo usun caly wiersz <tr>. -->
+      <div class="table-wrap">
+        <table class="schedule">
+          <thead>
+            <tr>
+              <th data-i18n="s_col_day">Dzień</th>
+              <th data-i18n="s_col_time">Godzina</th>
+              <th data-i18n="s_col_what">Co streamuję</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="s_mon">Poniedziałek</td><td>—</td><td>—</td></tr>
+            <tr><td data-i18n="s_tue">Wtorek</td><td>—</td><td>—</td></tr>
+            <tr><td data-i18n="s_wed">Środa</td><td>—</td><td>—</td></tr>
+            <tr><td data-i18n="s_thu">Czwartek</td><td>—</td><td>—</td></tr>
+            <tr><td data-i18n="s_fri">Piątek</td><td>—</td><td>—</td></tr>
+            <tr><td data-i18n="s_sat">Sobota</td><td>—</td><td>—</td></tr>
+            <tr><td data-i18n="s_sun">Niedziela</td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="sub" style="margin-top: 14px; font-size: .9rem;" data-i18n="s_tz">Godziny podane w czasie polskim.</p>
+
+      <!-- OPCJA: kalendarz Google zamiast tabeli.
+           W Kalendarzu Google utworz kalendarz "Streamy", ustaw go jako publiczny,
+           w jego ustawieniach wybierz "Zintegruj kalendarz" i skopiuj kod osadzania (iframe).
+           Wklej ten kod w tym miejscu. -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© 2026 Czeusha</div>
+  </footer>
+
+  <script src="lang.js"></script>
+</body>
+</html>
