@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n="r_title">Risen Together – mod co-op do Risen | Czeusha</title>
   <meta name="description" content="Risen Together: mod co-op do gry Risen autorstwa Czeushy.">
+
+  <!-- Podglad linku (Discord, Facebook, X): pokazuje baner -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Risen Together – mod co-op do Risen">
+  <meta property="og:description" content="Mod co-op do gry Risen autorstwa Czeushy.">
+  <meta property="og:image" content="https://czeusha.github.io/risen-banner.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="risen.css">
 </head>
@@ -26,11 +34,14 @@
     </div>
   </nav>
 
-  <!-- Tlo hero: wrzuc swoj screenshot z gry jako "risen-banner.jpg" do repozytorium, a pojawi sie automatycznie -->
-  <header class="hero">
-    <div class="container">
+  <!-- Baner z napisem jest w obrazku risen-banner.jpg, wiec naglowek h1 jest tylko dla czytnikow ekranu i wyszukiwarek -->
+  <header class="hero risen-hero">
+    <div class="banner">
+      <img src="risen-banner.jpg" alt="Risen Together" width="1800" height="1115">
+    </div>
+    <div class="container hero-body">
+      <h1 class="sr-only">Risen Together</h1>
       <span class="badge" data-i18n="badge_dev">W produkcji</span>
-      <h1>Risen <em>Together</em></h1>
       <p data-i18n="r_hero_p">Mod co-op do gry Risen. Eksploruj wyspę razem ze znajomym zamiast wędrować samotnie.</p>
       <div class="btn-row">
         <!-- TODO: gdy bedzie wersja do pobrania, podmien href na link do Releases i usun klase "disabled" -->
@@ -53,8 +64,8 @@
       <h2 data-i18n="r_feat_h">Funkcje</h2>
       <p class="sub" data-i18n="r_dev_note">Poniższe funkcje działają w wersji deweloperskiej. Wydanie do pobrania jeszcze nie jest dostępne.</p>
 
-      <div class="grid">
-        <div class="card">
+      <div class="grid feat-grid">
+        <div class="card card--done">
           <h3 data-i18n="r_done_h">Już działa</h3>
           <ul class="list">
             <li data-i18n="d1">Handel między graczami</li>
@@ -71,14 +82,14 @@
           </ul>
         </div>
 
-        <div class="card">
+        <div class="card card--wip">
           <h3 data-i18n="r_wip_h">W trakcie prac</h3>
           <ul class="list">
             <li data-i18n="w1">Przeniesienie Risena na nowy silnik renderowania (Vulkan wrapper): lepszy render, większy zasięg widzenia i więcej opcji grafiki</li>
           </ul>
         </div>
 
-        <div class="card">
+        <div class="card card--plan">
           <h3 data-i18n="r_plan_h">W planach</h3>
           <ul class="list">
             <li data-i18n="p1">Minimapa</li>

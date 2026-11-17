@@ -29,6 +29,12 @@ var TRANSLATIONS = {
     guides_h: "Steam guides",
     guides_p: "Many game guides published on Steam.",
     retro_p: "Ready-made packs of older games, set up to launch easily on new computers.",
+    coop_h: "Co-op projects",
+    coop_sub: "Mods that let you play with friends.",
+    retro_sub: "Ready-made packs of older games for modern computers.",
+    retro_soon_h: "First packs coming soon",
+    retro_soon_p: "More titles will appear on this list as they're ready.",
+    other_h: "Other released projects",
 
     about_h: "About me",
     about_sub: "A gamer who loves old productions despite powerful hardware. I mostly play games with a co-op mode, whether through mods or natively. You'll find all my mods and downloads on this site.",

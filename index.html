@@ -42,20 +42,58 @@
       <h2 data-i18n="projects_h">Projekty</h2>
       <p class="sub" data-i18n="projects_sub">Wszystko, nad czym pracuję i co już zrobiłem, w jednym miejscu.</p>
 
-      <div class="grid">
-        <a class="card" href="risen-together.html">
-          <span class="badge" data-i18n="badge_dev">W produkcji</span>
-          <h3>Risen Together</h3>
-          <p data-i18n="risen_p">Mod co-op do gry Risen. Przejdź przygodę razem ze znajomym.</p>
-        </a>
+      <div class="proj-cols">
 
-        <!-- TODO: dodaj link do pobrania, zamieniajac <div> na <a class="card" href="LINK"> -->
-        <div class="card">
-          <span class="badge done" data-i18n="badge_done">Wydane</span>
-          <h3>Czeusha's Morrowind Coop</h3>
-          <p data-i18n="coop_p">Zestaw 150 modyfikacji do Morrowinda, przygotowany do gry w co-opie.</p>
+        <div class="panel">
+          <h3 data-i18n="coop_h">Projekty Coop</h3>
+          <p class="panel-sub" data-i18n="coop_sub">Mody, dzięki którym zagrasz ze znajomymi.</p>
+          <ul class="proj-list">
+            <li>
+              <a class="proj-item" href="risen-together.html">
+                <img class="thumb" src="risen-banner.jpg" alt="" width="96" height="60" loading="lazy">
+                <span class="pi-main">
+                  <strong>Risen Together</strong>
+                  <small data-i18n="risen_p">Mod co-op do gry Risen. Przejdź przygodę razem ze znajomym.</small>
+                  <span class="badge" data-i18n="badge_dev">W produkcji</span>
+                </span>
+                <span class="arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </li>
+            <li>
+              <!-- TODO: dodaj link do pobrania, zamieniajac <div class="proj-item"> na <a class="proj-item" href="LINK"> (oraz zamykajacy </div> na </a>) -->
+              <div class="proj-item">
+                <span class="pi-main">
+                  <strong>Czeusha's Morrowind Coop</strong>
+                  <small data-i18n="coop_p">Zestaw 150 modyfikacji do Morrowinda, przygotowany do gry w co-opie.</small>
+                  <span class="badge done" data-i18n="badge_done">Wydane</span>
+                </span>
+              </div>
+            </li>
+            <!-- Kolejny projekt coop dodasz kopiujac jeden z blokow <li> powyzej -->
+          </ul>
         </div>
 
+        <div class="panel">
+          <h3>Retro Packs</h3>
+          <p class="panel-sub" data-i18n="retro_sub">Gotowe paczki starszych gier na nowe komputery.</p>
+          <ul class="proj-list">
+            <li>
+              <div class="proj-item soon">
+                <span class="pi-main">
+                  <strong data-i18n="retro_soon_h">Pierwsze paczki wkrótce</strong>
+                  <small data-i18n="retro_soon_p">Kolejne tytuły pojawią się na tej liście, gdy będą gotowe.</small>
+                  <span class="badge planned" data-i18n="badge_planned">W planach</span>
+                </span>
+              </div>
+            </li>
+            <!-- Gdy bedzie pierwsza paczka: skopiuj blok <li> z Risen Together (link do jej podstrony) i wstaw tutaj -->
+          </ul>
+        </div>
+
+      </div>
+
+      <h3 class="subhead" data-i18n="other_h">Inne wydane projekty</h3>
+      <div class="grid">
         <div class="card">
           <span class="badge done" data-i18n="badge_done">Wydane</span>
           <h3 data-i18n="dub_h">Polski dubbing do Morrowinda</h3>
@@ -72,12 +110,6 @@
           <span class="badge done" data-i18n="badge_done">Wydane</span>
           <h3 data-i18n="guides_h">Poradniki na Steamie</h3>
           <p data-i18n="guides_p">Wiele poradników do gier opublikowanych na Steamie.</p>
-        </div>
-
-        <div class="card">
-          <span class="badge planned" data-i18n="badge_planned">W planach</span>
-          <h3>Retro Packs</h3>
-          <p data-i18n="retro_p">Gotowe paczki starszych gier, przygotowane tak, żeby łatwo je uruchomić na nowych komputerach.</p>
         </div>
       </div>
     </div>
