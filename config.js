@@ -6,10 +6,10 @@ window.SITE = {
 
   // --- YouTube ---
   // Adres kanału, np. "https://www.youtube.com/@twojkanal". Włącza przyciski YouTube na stronie.
-  youtubeUrl: "",
+  youtubeUrl: "https://www.youtube.com/@Czeusha",
   // 24 znaki zaczynające się od UC (YouTube Studio > Ustawienia > Kanał > Ustawienia zaawansowane).
   // Włącza odtwarzacz z ostatnimi filmami w zakładce YouTube na stronie Stream.
-  youtubeChannelId: "",
+  youtubeChannelId: "UCJH3wr6EcRrWEPRJvkeyqhg",
 
   // --- Nazwy kanałów do odtwarzaczy na stronie Stream ---
   twitchChannel: "czeusha",
