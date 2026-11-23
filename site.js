@@ -59,8 +59,8 @@
                '?muted=true&autoplay=false" title="Kick" allowfullscreen loading="lazy"></iframe>';
       }
       if (p === 'youtube' && ytId) {
-        // lista wszystkich filmow kanalu (UU + ID kanalu bez "UC"): zawsze pokazuje najnowsze, takze zapisy streamow
-        return '<iframe src="https://www.youtube.com/embed/videoseries?list=UU' + ytId.slice(2) +
+        // odtwarzacz transmisji na zywo kanalu: pokazuje stream, gdy trwa
+        return '<iframe src="https://www.youtube.com/embed/live_stream?channel=' + ytId +
                '" title="YouTube" allowfullscreen loading="lazy"></iframe>';
       }
       return '';
