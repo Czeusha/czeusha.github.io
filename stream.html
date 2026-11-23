@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stream – Czeusha</title>
   <meta name="description" content="Transmisja na żywo i harmonogram streamów Czeushy.">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -58,6 +58,20 @@
 
         <a class="active" href="stream.html">Stream</a>
         <a href="index.html#linki" data-i18n="nav_links">Linki</a>
+        <div class="notify-wrap">
+          <button type="button" class="bell-nav" aria-haspopup="true" aria-expanded="false" aria-label="Powiadomienia" data-i18n-aria="n_bell_aria"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bell-dot" hidden></span></button>
+          <div class="notify-pop" hidden>
+            <strong data-i18n="n_pop_h">Powiadomienia</strong>
+            <p class="n-hint" data-i18n="n_pop_p">Wybierz, o czym mam Cię powiadamiać. Każde ustawienie działa osobno.</p>
+            <button type="button" class="bell-btn" data-notify="updates" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_updates">Aktualizacje strony i modów</span><em class="st"></em></button>
+            <button type="button" class="bell-btn" data-notify="twitch" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_twitch">Stream na Twitchu</span><em class="st"></em></button>
+            <button type="button" class="bell-btn" data-notify="kick" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_kick">Stream na Kicku</span><em class="st"></em></button>
+            <button type="button" class="bell-btn" data-notify="youtube" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_youtube">Stream na YouTube</span><em class="st"></em></button>
+            <button type="button" class="bell-btn all" data-notify-all="all" aria-pressed="false" data-on-key="n_all_on" data-on-pl="Włącz wszystkie" data-off-key="n_all_off" data-off-pl="Wyłącz wszystkie"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="all-label">Włącz wszystkie</span></button>
+            <p class="n-soon" hidden data-i18n="n_soon">Powiadomienia będą dostępne wkrótce.</p>
+            <p class="n-msg" data-notify-msg role="status" aria-live="polite"></p>
+          </div>
+        </div>
         <div class="lang">
           <button type="button" data-lang="pl">PL</button>
           <button type="button" data-lang="en">EN</button>
@@ -73,7 +87,7 @@
       <div class="btn-row">
         <a class="btn primary" href="https://twitch.tv/czeusha" target="_blank" rel="noopener">Twitch</a>
         <a class="btn" href="https://kick.com/czeusha" target="_blank" rel="noopener">Kick</a>
-        <!-- TODO: dodaj przycisk YouTube, gdy podasz link do kanalu -->
+        <a class="btn" href="#" data-yt>YouTube</a>
       </div>
     </div>
   </header>
@@ -83,14 +97,42 @@
       <h2 data-i18n="s_live_h">Na żywo</h2>
       <p class="sub" data-i18n="s_live_sub">Gdy streamuję, zobaczysz tutaj transmisję. W przeciwnym razie zobaczysz ekran offline.</p>
 
-      <!-- Odtwarzacz Twitcha. Parametr "parent" musi byc adresem strony.
-           Jesli kiedys kupisz wlasna domene, dopisz ja: &parent=twojadomena.pl -->
+      <!-- Wybor platformy. Odtwarzacze laduja sie dopiero po wybraniu zakladki (kod w site.js).
+           Nazwy kanalow i ID kanalu YouTube ustawiasz w config.js. -->
+      <div class="tabs" role="tablist" aria-label="Platforma">
+        <button type="button" class="tab" role="tab" id="tab-twitch" data-platform="twitch" aria-controls="panel-twitch" aria-selected="true">Twitch</button>
+        <button type="button" class="tab" role="tab" id="tab-kick" data-platform="kick" aria-controls="panel-kick" aria-selected="false" tabindex="-1">Kick</button>
+        <button type="button" class="tab" role="tab" id="tab-youtube" data-platform="youtube" aria-controls="panel-youtube" aria-selected="false" tabindex="-1">YouTube</button>
+      </div>
+
       <div class="video">
-        <iframe
-          src="https://player.twitch.tv/?channel=czeusha&parent=czeusha.github.io&muted=true&autoplay=false"
-          title="Twitch – czeusha"
-          allowfullscreen
-          loading="lazy"></iframe>
+        <div class="panel" id="panel-twitch" role="tabpanel" aria-labelledby="tab-twitch"></div>
+        <div class="panel" id="panel-kick" role="tabpanel" aria-labelledby="tab-kick" hidden></div>
+        <div class="panel" id="panel-youtube" role="tabpanel" aria-labelledby="tab-youtube" hidden>
+          <p class="panel-msg" data-i18n="s_yt_soon">Odtwarzacz YouTube pojawi się, gdy dodam kanał.</p>
+        </div>
+      </div>
+
+      <div class="platform-actions">
+        <div data-for="twitch"><a class="btn" href="https://twitch.tv/czeusha" target="_blank" rel="noopener" data-i18n="s_open_twitch">Otwórz na Twitchu</a></div>
+        <div data-for="kick" hidden><a class="btn" href="https://kick.com/czeusha" target="_blank" rel="noopener" data-i18n="s_open_kick">Otwórz na Kicku</a></div>
+        <div data-for="youtube" hidden>
+          <a class="btn" href="#" data-yt data-i18n="s_open_yt">Otwórz na YouTube</a>
+          <span id="yt-live-wrap" hidden><a class="btn" id="yt-live" href="#" target="_blank" rel="noopener" data-i18n="s_yt_live">Transmisja na żywo</a></span>
+        </div>
+      </div>
+
+      <div class="notify-box" id="powiadomienia">
+        <h3 data-i18n="n_stream_h">Powiadom mnie o streamie</h3>
+        <p data-i18n="n_stream_p">Dostaniesz powiadomienie, gdy zacznę transmisję. Włącz tylko te platformy, które Cię interesują, albo wszystkie naraz.</p>
+        <div class="bell-row">
+          <button type="button" class="bell-btn" data-notify="twitch" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl">Twitch</span><em class="st"></em></button>
+          <button type="button" class="bell-btn" data-notify="kick" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl">Kick</span><em class="st"></em></button>
+          <button type="button" class="bell-btn" data-notify="youtube" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl">YouTube</span><em class="st"></em></button>
+          <button type="button" class="bell-btn all" data-notify-all="streams" aria-pressed="false" data-on-key="n_all_on" data-on-pl="Włącz wszystkie" data-off-key="n_all_off" data-off-pl="Wyłącz wszystkie"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="all-label">Włącz wszystkie</span></button>
+        </div>
+        <p class="n-soon" hidden data-i18n="n_soon">Powiadomienia będą dostępne wkrótce.</p>
+        <p class="n-msg" data-notify-msg role="status" aria-live="polite"></p>
       </div>
     </div>
   </section>
@@ -113,7 +155,7 @@
           </thead>
           <tbody>
             <tr><td data-i18n="s_mon">Poniedziałek</td><td>—</td><td>—</td></tr>
-            <tr><td data-i18n="s_tue">Wtorek</td><td>—</td><td>—</td></tr>
+            <tr><td data-i18n="s_tue">Wtorek</td><td>17:00–20:00</td><td>Odpicowany Heroes 5.5 (Heroes of Might and Magic V)</td></tr>
             <tr><td data-i18n="s_wed">Środa</td><td>—</td><td>—</td></tr>
             <tr><td data-i18n="s_thu">Czwartek</td><td>—</td><td>—</td></tr>
             <tr><td data-i18n="s_fri">Piątek</td><td>—</td><td>—</td></tr>
@@ -136,6 +178,9 @@
     <div class="container">© 2026 Czeusha</div>
   </footer>
 
-  <script src="lang.js?v=3"></script>
+  <script src="config.js?v=4"></script>
+  <script src="notify.js?v=4"></script>
+  <script src="site.js?v=4"></script>
+  <script src="lang.js?v=4"></script>
 </body>
 </html>

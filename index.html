@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n="title">Czeusha – Mody i projekty</title>
   <meta name="description" content="Strona Czeushy: YouTuber, gamer i streamer. Moje mody, projekty co-op oraz gotowe paczki starszych gier.">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -58,6 +58,20 @@
 
         <a href="stream.html">Stream</a>
         <a href="index.html#linki" data-i18n="nav_links">Linki</a>
+        <div class="notify-wrap">
+          <button type="button" class="bell-nav" aria-haspopup="true" aria-expanded="false" aria-label="Powiadomienia" data-i18n-aria="n_bell_aria"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bell-dot" hidden></span></button>
+          <div class="notify-pop" hidden>
+            <strong data-i18n="n_pop_h">Powiadomienia</strong>
+            <p class="n-hint" data-i18n="n_pop_p">Wybierz, o czym mam Cię powiadamiać. Każde ustawienie działa osobno.</p>
+            <button type="button" class="bell-btn" data-notify="updates" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_updates">Aktualizacje strony i modów</span><em class="st"></em></button>
+            <button type="button" class="bell-btn" data-notify="twitch" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_twitch">Stream na Twitchu</span><em class="st"></em></button>
+            <button type="button" class="bell-btn" data-notify="kick" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_kick">Stream na Kicku</span><em class="st"></em></button>
+            <button type="button" class="bell-btn" data-notify="youtube" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_youtube">Stream na YouTube</span><em class="st"></em></button>
+            <button type="button" class="bell-btn all" data-notify-all="all" aria-pressed="false" data-on-key="n_all_on" data-on-pl="Włącz wszystkie" data-off-key="n_all_off" data-off-pl="Wyłącz wszystkie"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="all-label">Włącz wszystkie</span></button>
+            <p class="n-soon" hidden data-i18n="n_soon">Powiadomienia będą dostępne wkrótce.</p>
+            <p class="n-msg" data-notify-msg role="status" aria-live="polite"></p>
+          </div>
+        </div>
         <div class="lang">
           <button type="button" data-lang="pl">PL</button>
           <button type="button" data-lang="en">EN</button>
@@ -72,8 +86,9 @@
       <p data-i18n="hero_p">Mały YouTuber, gamer i streamer. Robię mody, tworzę projekty co-op i przygotowuję gotowe paczki starszych gier, które łatwo odpalić na nowych komputerach.</p>
       <div class="btn-row">
         <a class="btn primary" href="#projekty" data-i18n="btn_projects">Moje projekty</a>
-        <a class="btn" href="https://twitch.tv/czeusha" target="_blank" rel="noopener">Twitch</a>
+        <a class="btn" href="#" data-yt>YouTube</a>
         <a class="btn" href="https://discord.gg/3G6SpS7euk" target="_blank" rel="noopener">Discord</a>
+        <a class="btn support" href="https://tipply.pl/@czeusha" target="_blank" rel="noopener"><span class="heart" aria-hidden="true">&#9829;</span> <span data-i18n="btn_support">Wesprzyj mnie</span></a>
       </div>
     </div>
   </header>
@@ -158,7 +173,10 @@
           <svg class="ico" viewBox="0 0 24 24" fill="#60a5fa" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           <strong>E-mail</strong><span>Czeusha@gmail.com</span>
         </a>
-        <!-- TODO: dodaj karte YouTube (ikona: https://cdn.simpleicons.org/youtube/FF0000), gdy podasz link do kanalu -->
+        <a class="link-card" href="#" data-yt>
+          <img class="ico" src="https://cdn.simpleicons.org/youtube/FF0000" alt="" width="38" height="38" loading="lazy">
+          <strong>YouTube</strong><span class="yt-sub" data-i18n="yt_soon_s">Wkrótce</span>
+        </a>
       </div>
     </div>
   </section>
@@ -167,7 +185,10 @@
     <div class="container">© 2026 Czeusha</div>
   </footer>
 
-  <script src="lang.js?v=3"></script>
+  <script src="config.js?v=4"></script>
+  <script src="notify.js?v=4"></script>
+  <script src="site.js?v=4"></script>
+  <script src="lang.js?v=4"></script>
   <script>
     /* Widget Discorda: pobiera nazwe, ikone i liczby z publicznego linku zaproszenia.
        Jesli sie nie uda (np. zaproszenie wygaslo), zostaje domyslny wyglad bez liczb. */

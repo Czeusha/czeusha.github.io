@@ -13,8 +13,8 @@
   <meta property="og:image" content="https://czeusha.github.io/risen-banner.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="style.css?v=3">
-  <link rel="stylesheet" href="risen.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="risen.css?v=4">
 </head>
 <body class="theme-risen">
 
@@ -67,6 +67,20 @@
 
         <a href="stream.html">Stream</a>
         <a href="index.html#linki" data-i18n="nav_links">Linki</a>
+        <div class="notify-wrap">
+          <button type="button" class="bell-nav" aria-haspopup="true" aria-expanded="false" aria-label="Powiadomienia" data-i18n-aria="n_bell_aria"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bell-dot" hidden></span></button>
+          <div class="notify-pop" hidden>
+            <strong data-i18n="n_pop_h">Powiadomienia</strong>
+            <p class="n-hint" data-i18n="n_pop_p">Wybierz, o czym mam Cię powiadamiać. Każde ustawienie działa osobno.</p>
+            <button type="button" class="bell-btn" data-notify="updates" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_updates">Aktualizacje strony i modów</span><em class="st"></em></button>
+            <button type="button" class="bell-btn" data-notify="twitch" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_twitch">Stream na Twitchu</span><em class="st"></em></button>
+            <button type="button" class="bell-btn" data-notify="kick" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_kick">Stream na Kicku</span><em class="st"></em></button>
+            <button type="button" class="bell-btn" data-notify="youtube" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_youtube">Stream na YouTube</span><em class="st"></em></button>
+            <button type="button" class="bell-btn all" data-notify-all="all" aria-pressed="false" data-on-key="n_all_on" data-on-pl="Włącz wszystkie" data-off-key="n_all_off" data-off-pl="Wyłącz wszystkie"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="all-label">Włącz wszystkie</span></button>
+            <p class="n-soon" hidden data-i18n="n_soon">Powiadomienia będą dostępne wkrótce.</p>
+            <p class="n-msg" data-notify-msg role="status" aria-live="polite"></p>
+          </div>
+        </div>
         <div class="lang">
           <button type="button" data-lang="pl">PL</button>
           <button type="button" data-lang="en">EN</button>
@@ -89,6 +103,7 @@
         <a class="btn primary disabled" href="#" data-i18n="r_dl">Pobierz – wkrótce</a>
         <a class="btn" href="#instalacja" data-i18n="r_how">Jak zainstalować</a>
         <a class="btn" href="https://discord.gg/3G6SpS7euk" target="_blank" rel="noopener">Discord</a>
+        <button type="button" class="btn" data-open-bug data-i18n="b_btn">Zgłoś buga</button>
       </div>
     </div>
   </header>
@@ -195,8 +210,22 @@
         <div class="date">2026</div>
         <p data-i18n="r_log_p">Rozpoczęto prace nad Risen Together.</p>
       </div>
+      <div class="notify-inline">
+        <button type="button" class="bell-btn" data-notify="updates" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg><span class="bl" data-i18n="n_updates_btn">Powiadom mnie o nowych zmianach</span><em class="st"></em></button>
+        <p class="n-soon" hidden data-i18n="n_soon">Powiadomienia będą dostępne wkrótce.</p>
+        <p class="n-msg" data-notify-msg role="status" aria-live="polite"></p>
+      </div>
     </div>
   </section>
+
+  <section id="zglos-buga">
+    <div class="container">
+      <h2 data-i18n="b_h">Znalazłeś błąd?</h2>
+      <p class="sub" data-i18n="b_sub">Mod jest testowany, więc zgłoszenia bardzo pomagają. Wypełnij krótki formularz: im dokładniej opiszesz sytuację, tym szybciej uda się błąd naprawić.</p>
+      <button type="button" class="btn primary" data-open-bug data-i18n="b_btn">Zgłoś buga</button>
+    </div>
+  </section>
+
 
   <section>
     <div class="container">
@@ -206,10 +235,62 @@
     </div>
   </section>
 
+  <dialog id="bug-dialog" class="bug-dialog" aria-labelledby="bug-title">
+    <form id="bug-form" class="bug-form" >
+      <div class="bug-head">
+        <h2 id="bug-title" data-i18n="b_h2">Zgłoś buga – Risen Together</h2>
+        <button type="button" class="bug-x" data-close-bug aria-label="Zamknij" data-i18n-aria="b_close">&times;</button>
+      </div>
+      <p class="bug-note" data-i18n="b_note">Pola oznaczone * są wymagane. Opisz błąd własnymi słowami, po polsku lub po angielsku.</p>
+
+      <label><span data-i18n="b_email">Twój e-mail *</span>
+        <input type="email" name="email" required autocomplete="email" placeholder="adres@example.com"></label>
+      <div class="two">
+        <label><span data-i18n="b_version">Wersja moda / build</span>
+          <input type="text" name="version" placeholder="np. build z 20.11" data-i18n-ph="b_version_ph"></label>
+        <label><span data-i18n="b_role">Rola w grze</span>
+          <select name="role">
+            <option value="Host (zakładam grę)" data-i18n="b_role_host">Host (zakładam grę)</option>
+            <option value="Klient (dołączam do gry)" data-i18n="b_role_client">Klient (dołączam do gry)</option>
+            <option value="Nie dotyczy / nie wiem" data-i18n="b_role_na">Nie dotyczy / nie wiem</option>
+          </select></label>
+      </div>
+      <label><span data-i18n="b_system">System i sprzęt</span>
+        <input type="text" name="system" placeholder="np. Windows 11, RTX 3060, 16 GB RAM" data-i18n-ph="b_system_ph"></label>
+      <label><span data-i18n="b_what">1. Sytuacja – co się stało? *</span>
+        <textarea name="what" rows="3" required placeholder="np. po handlu przedmiot zniknął obu graczom" data-i18n-ph="b_what_ph"></textarea></label>
+      <label><span data-i18n="b_steps">2. Co trzeba zrobić, żeby to powtórzyć? *</span>
+        <textarea name="steps" rows="4" required placeholder="1. Uruchom grę jako host&#10;2. Dołącz drugim graczem&#10;3. ..." data-i18n-ph="b_steps_ph"></textarea></label>
+      <label><span data-i18n="b_expected">3. Co powinno się stać?</span>
+        <textarea name="expected" rows="2"></textarea></label>
+      <label><span data-i18n="b_plugins">4. Jakie pluginy, mody i opcje co-opa były włączone?</span>
+        <textarea name="plugins" rows="3" placeholder="np. handel, sprint, nowy HUD, mini-mapa wyłączona" data-i18n-ph="b_plugins_ph"></textarea></label>
+      <label><span data-i18n="b_links">5. Linki do logów, zrzutów ekranu lub nagrania</span>
+        <input type="text" name="links" placeholder="https://..."></label>
+
+      <!-- pole-pulapka na boty: ludzie go nie widza -->
+      <div class="hp" aria-hidden="true"><label>Nie zaznaczaj <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+
+      <p class="form-msg" role="status" aria-live="polite"></p>
+      <div class="bug-copy-wrap" hidden>
+        <textarea class="bug-copy" readonly rows="6" aria-label="Treść zgłoszenia"></textarea>
+        <button type="button" class="btn" data-copy-bug data-i18n="b_copy">Skopiuj treść</button>
+      </div>
+
+      <div class="bug-actions">
+        <button type="submit" class="btn primary" data-i18n="b_send">Wyślij zgłoszenie</button>
+        <button type="button" class="btn" data-close-bug data-i18n="b_cancel">Anuluj</button>
+      </div>
+    </form>
+  </dialog>
+
   <footer>
     <div class="container">© 2026 Czeusha</div>
   </footer>
 
-  <script src="lang.js?v=3"></script>
+  <script src="config.js?v=4"></script>
+  <script src="notify.js?v=4"></script>
+  <script src="site.js?v=4"></script>
+  <script src="lang.js?v=4"></script>
 </body>
 </html>
